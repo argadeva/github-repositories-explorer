@@ -1,54 +1,81 @@
-# React + TypeScript + Vite
+# GitHub Repositories Explorer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a GitHub Repositories Explorer that allows users to search and explore GitHub repositories.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Search GitHub users by username
+- View user repositories with details
+- Infinite scroll pagination
+- Responsive design with Tailwind CSS
+- Error handling and loading states
+- Automated testing with Vitest
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- React 19
+- TypeScript
+- Vite
+- TanStack Query (React Query)
+- Tailwind CSS
+- Vitest + Testing Library
+- ESLint + Prettier
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## Installation
+
+1. Clone the repository:
+  ```sh
+  git clone https://github.com/your-username/github-repositories-explorer.git
+  ```
+2. Navigate to the project directory:
+  ```sh
+  cd github-repositories-explorer
+  ```
+3. Install dependencies:
+  ```sh
+  npm install
+  ```
+
+## Usage
+
+1. Start the development server:
+  ```sh
+  npm run dev
+  ```
+2. Open your browser and navigate to `http://localhost:3000`
+
+## Project Structure
+```sh
+src/
+  ├── __tests__/      # Test files
+  ├── assets/         # SVG icons and assets
+  ├── types/          # TypeScript type definitions
+  ├── utils/          # API and utility functions
+  ├── App.tsx         # Root component
+  ├── FindUsers.tsx   # User search component
+  └── DetailUser.tsx  # Repository details component
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Test Coverage
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+The project maintains high test coverage to ensure code quality and reliability. Below is the latest coverage report:
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+![Test Coverage](./public/unit_tests.png)
+
+You can find detailed coverage reports in the `coverage` directory after running:
+```sh
+npm run test:coverage
+```
+
+## Available Scripts
+```sh
+npm run dev - Start development server
+npm run build - Build for production
+npm run preview - Preview production build
+npm run test - Run tests
+npm run test:coverage - Run tests with coverage
+npm run lint - Run ESLint
+npm run lint:fix - Fix ESLint issues
+npm run format - Format code with Prettier
+npm run format:check - Check code formatting
 ```
