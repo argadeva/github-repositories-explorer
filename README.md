@@ -1,5 +1,9 @@
 # GitHub Repositories Explorer
 
+![GitHub Repositories Explorer](./public/screenshot.png)
+
+[Live Demo](https://argadeva.github.io/github-repositories-explorer/)
+
 This project is a GitHub Repositories Explorer that allows users to search and explore GitHub repositories.
 
 ## Features
