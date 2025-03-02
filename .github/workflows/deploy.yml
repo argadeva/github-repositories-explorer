@@ -22,10 +22,6 @@ jobs:
           node-version: 18
           cache: 'npm'
 
-      - name: Create .env file
-        run: |
-          echo "VITE_GITHUB_API_KEY=${{ secrets.VITE_GITHUB_API_KEY }}" >> .env
-
       - name: Install dependencies
         run: npm install
 
