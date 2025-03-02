@@ -1,0 +1,9 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`App Component > should be wrapped in QueryClientProvider 1`] = `
+<div
+  data-testid="find-users"
+>
+  Mock FindUsers Component
+</div>
+`;
