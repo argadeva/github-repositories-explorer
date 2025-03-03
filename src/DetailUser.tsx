@@ -59,8 +59,10 @@ export default function CardDetails({ login }: User) {
                   className="flex flex-row justify-between gap-4 bg-gray-200 p-4"
                 >
                   <div className="flex flex-1 flex-col">
-                    <h2 className="text-2xl font-bold">{repo.name}</h2>
-                    <p className="text-md">
+                    <h2 className="text-2xl font-bold break-words">
+                      {repo.name}
+                    </h2>
+                    <p className="text-md break-words">
                       {repo.description || 'No description available'}
                     </p>
                   </div>
