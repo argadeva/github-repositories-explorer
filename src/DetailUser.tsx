@@ -21,8 +21,8 @@ export default function CardDetails({ login }: User) {
   return (
     <>
       <div className="flex items-center justify-between bg-gray-100">
-        <h2 className="pl-4 text-xl">{login}</h2>
-        <button className="cursor-pointer px-2 py-2" onClick={toggleAccordion}>
+        <h2 className="flex-1 p-4 text-xl break-words break-all">{login}</h2>
+        <button className="cursor-pointer pr-2" onClick={toggleAccordion}>
           {isOpen ? (
             <img src={ChevronUpIcon} alt="Collapse Up" className="h-8 w-8" />
           ) : (
